@@ -1,0 +1,21 @@
+{
+  "name": "jacoblincool",
+  "version": "1.0.0",
+  "description": "JacobLinCool's Profile Package",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest"
+  },
+  "keywords": [
+    "jacoblincool",
+    "profile"
+  ],
+  "author": "JacobLinCool",
+  "license": "",
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "jest": "^27.1.0",
+    "node-fetch": "^3.0.0"
+  }
+}
