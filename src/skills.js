@@ -8,6 +8,10 @@ const programming_languages = [
         level: "basics",
     },
     {
+        name: "Visual Basic 6",
+        level: "almost_forgotten",
+    },
+    {
         name: "Python",
         level: "weak_snake",
     },
@@ -31,7 +35,7 @@ const tools = [
         level: "some_experiences",
     },
     {
-        name: "Qt",
+        name: "Qt (C++)",
         level: "forgotten",
     },
 ];
