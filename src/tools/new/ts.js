@@ -84,14 +84,18 @@ module.exports = {
 function add_prettier_config() {
     writeFileSync(
         resolve(process.cwd(), ".prettierrc"),
-        JSON.stringify({
-            printWidth: 160,
-            tabWidth: 4,
-            useTabs: false,
-            trailingComma: "all",
-            semi: true,
-            singleQuote: false,
-        })
+        JSON.stringify(
+            {
+                printWidth: 160,
+                tabWidth: 4,
+                useTabs: false,
+                trailingComma: "all",
+                semi: true,
+                singleQuote: false,
+            },
+            null,
+            4
+        )
     );
 }
 
