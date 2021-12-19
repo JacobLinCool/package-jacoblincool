@@ -1,6 +1,6 @@
 {
     "name": "jacoblincool",
-    "version": "18.0.0",
+    "version": "18.0.1",
     "description": "JacobLinCool's Package",
     "main": "src/jacob.js",
     "bin": {
@@ -19,10 +19,20 @@
     "license": "MIT",
     "devDependencies": {
         "@types/node": "^17.0.0",
+        "jest": "^27.4.5",
         "prettier": "^2.5.1"
     },
     "dependencies": {
         "chalk": "4",
-        "commander": "^8.3.0"
+        "commander": "^8.3.0",
+        "node-fetch": "2"
+    },
+    "bugs": {
+        "url": "https://github.com/JacobLinCool/package-jacoblincool/issues"
+    },
+    "homepage": "https://jacoblincool.github.io/package-jacoblincool/",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/JacobLinCool/package-jacoblincool.git"
     }
 }
