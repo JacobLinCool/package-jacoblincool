@@ -24,4 +24,4 @@ const education = [
     },
 ];
 
-export default { education };
+module.exports = education;
