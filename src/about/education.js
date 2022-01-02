@@ -8,9 +8,7 @@ const education = [
         name: "國立臺灣師範大學附屬高級中學",
         since: "2018",
         graduation: "2021",
-        details: {
-            class: 1481,
-        },
+        note: "1481 班",
     },
     {
         name: "臺北市立金華國民中學",

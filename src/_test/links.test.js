@@ -3,6 +3,8 @@ const basics = require("../about/basics");
 const social = require("../about/social");
 
 describe("Check Links", () => {
+    jest.setTimeout(10_000);
+
     it("website", async () => {
         const code = await fetch(basics.website).then((res) => res.status);
         expect(code).toBe(200);
