@@ -1,6 +1,6 @@
 {
     "name": "jacoblincool",
-    "version": "18.1.0",
+    "version": "18.2.0",
     "description": "JacobLinCool's Package",
     "main": "src/jacob.js",
     "bin": {
