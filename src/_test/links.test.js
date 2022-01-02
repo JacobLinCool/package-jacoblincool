@@ -9,6 +9,14 @@ describe("Check Links", () => {
         const code = await fetch(basics.website).then((res) => res.status);
         expect(code).toBe(200);
     });
+    it("github", async () => {
+        const code = await fetch(social.GitHub).then((res) => res.status);
+        expect(code).toBe(200);
+    });
+    it.skip("linkedin", async () => {
+        const code = await fetch(social.LinkedIn).then((res) => res.status);
+        expect(code).toBe(200); // always 999
+    });
     it("facebook", async () => {
         const code = await fetch(social.Facebook).then((res) => res.status);
         expect(code).toBe(200);
@@ -19,10 +27,6 @@ describe("Check Links", () => {
     });
     it("twitter", async () => {
         const code = await fetch(social.Twitter).then((res) => res.status);
-        expect(code).toBe(200);
-    });
-    it("github", async () => {
-        const code = await fetch(social.GitHub).then((res) => res.status);
         expect(code).toBe(200);
     });
     it("telegram", async () => {
