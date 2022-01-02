@@ -1,0 +1,8 @@
+# tests
+src/_test/
+
+# git files
+.gitattributes
+
+# renovate config
+renovate.json
