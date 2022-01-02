@@ -136,7 +136,8 @@ jest.config.js
 function add_files() {
     mkdirSync(resolve(process.cwd(), "src", "_tests"), { recursive: true });
     writeFileSync(resolve(process.cwd(), "src", "index.ts"), "");
-    writeFileSync(resolve(process.cwd(), "src", "_tests", "index.ts"), "");
+    writeFileSync(resolve(process.cwd(), "src", "types.ts"), "");
+    writeFileSync(resolve(process.cwd(), "src", "_tests", "index.test.ts"), "");
 }
 
 function create_ts_project() {
