@@ -45,8 +45,8 @@ function add_ts_config() {
                 },
             },
             null,
-            4
-        )
+            4,
+        ),
     );
 }
 
@@ -66,7 +66,7 @@ export default defineConfig((options) => ({
     // sourcemap: !options.watch,
     minify: !options.watch,
     dts: !options.watch,
-}));`
+}));`,
     );
 }
 
@@ -77,7 +77,7 @@ function add_jest_config() {
 module.exports = {
     preset: "ts-jest",
     testEnvironment: "node",
-};`
+};`,
     );
 }
 
@@ -94,8 +94,8 @@ function add_prettier_config() {
                 singleQuote: false,
             },
             null,
-            4
-        )
+            4,
+        ),
     );
 }
 
@@ -111,7 +111,7 @@ module.exports = {
     rules: {
         "@typescript-eslint/explicit-module-boundary-types": ["error", { allowArgumentsExplicitlyTypedAsAny: true }],
     },
-};`
+};`,
     );
 
     writeFileSync(
@@ -129,7 +129,7 @@ docs
 # ignore config files
 .eslintrc.js
 jest.config.js
-# tsup.config.ts`
+# tsup.config.ts`,
     );
 }
 
@@ -182,7 +182,7 @@ function create_ts_project() {
     // install dev dependencies
     execSync(
         `pnpm i -D typescript tsup typedoc prettier jest ts-jest eslint eslint-config-prettier @typescript-eslint/parser @typescript-eslint/eslint-plugin @types/node @types/jest`,
-        { stdio: "inherit" }
+        { stdio: "inherit" },
     );
 
     // run prepare

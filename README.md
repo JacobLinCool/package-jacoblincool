@@ -26,6 +26,6 @@ jacob new ts
 
 ## Links
 
-- Github Repository: [package-jacoblincool](https://github.com/JacobLinCool/package-jacoblincool)
+-   Github Repository: [package-jacoblincool](https://github.com/JacobLinCool/package-jacoblincool)
 
-- NPM Package: [jacoblincool](https://www.npmjs.com/package/jacoblincool)
+-   NPM Package: [jacoblincool](https://www.npmjs.com/package/jacoblincool)

@@ -1,12 +1,13 @@
-const { yellowBright, blueBright, greenBright, magentaBright, cyanBright } = require("chalk");
-const { format_kv, shuffle, typing } = require("../utils");
-const { box, line, center, sides } = require("../format");
-const basics = require("./basics");
-const social = require("./social");
-const skills = require("./skills");
-const education = require("./education");
+import type { Chalk } from "chalk";
+import { yellowBright, blueBright, greenBright, magentaBright, cyanBright } from "chalk";
+import { format_kv, shuffle, typing } from "../utils";
+import { box, line, center, sides } from "../format";
+import basics from "./basics";
+import social from "./social";
+import skills from "./skills";
+import education from "./education";
 
-function* colorGenerator() {
+function* colorGenerator(): Generator<Chalk> {
     const colors = shuffle([yellowBright, blueBright, greenBright, magentaBright, cyanBright]);
     let i = 0;
     while (true) {
@@ -16,7 +17,7 @@ function* colorGenerator() {
 
 const color = colorGenerator();
 
-module.exports = async function () {
+export default async function (delay: number): Promise<void> {
     console.log();
     await typing(
         box(
@@ -50,8 +51,9 @@ module.exports = async function () {
                         }
                         return str;
                     }),
-            ].join("\n")
-        )
+            ].join("\n"),
+        ),
+        delay,
     );
     console.log("\n");
-};
+}

@@ -1,4 +1,6 @@
-const social = {
+const social: {
+    [key: string]: string;
+} = {
     GitHub: "https://github.com/JacobLinCool",
     LinkedIn: "https://www.linkedin.com/in/jacoblincool",
     Facebook: "https://www.facebook.com/jacob.lin.cool",
@@ -7,4 +9,4 @@ const social = {
     Telegram: "https://t.me/jacoblincool",
 };
 
-module.exports = social;
+export default social;

@@ -1,6 +1,8 @@
-const programming_languages = ["TypeScript", "JavaScript", "C", "C++", "Go", "Python"];
+const programming_languages: string[] = ["TypeScript", "JavaScript", "C", "C++", "Go", "Python"];
 
-const tools = {
+const tools: {
+    [key: string]: string;
+} = {
     "Node.js": "A JavaScript Runtime",
     Electron: "Building Cross-Platform Desktop Applications",
     "Cloudflare Workers": "Serverless Application Platform",
@@ -10,4 +12,4 @@ const tools = {
     Qt: "Cross-Platform C++ Application Development Framework",
 };
 
-module.exports = { programming_languages, tools };
+export default { programming_languages, tools };
