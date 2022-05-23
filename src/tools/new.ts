@@ -1,7 +1,7 @@
 import type { Chalk } from "chalk";
 import type { TemplateType } from "../types";
 import { tmpdir } from "os";
-import { copyFileSync, existsSync, lstatSync, mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync, mkdtempSync } from "fs";
+import { copyFileSync, existsSync, lstatSync, mkdirSync, readdirSync, readFileSync, writeFileSync, mkdtempSync } from "fs";
 import { resolve } from "path";
 import { execSync } from "child_process";
 import prompts from "prompts";
@@ -25,7 +25,7 @@ const actions: {
 } = {
     lib: async () => {
         clear_write(chalk`{cyanBright Initialing...}`);
-        execSync(`pnpm init -y`);
+        execSync(`pnpm init`);
 
         clear_write(chalk`{cyanBright Copying Files...}`);
         const template = resolve(template_dir, "lib");
