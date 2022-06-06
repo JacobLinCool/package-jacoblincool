@@ -47,7 +47,7 @@ const actions: {
         console.log(chalk`{redBright Not Implemented, Fallback to lib template}`);
         return await actions.lib();
         clear_write(chalk`{cyanBright Initialing...}`);
-        execSync(`pnpm init -y`);
+        execSync(`pnpm init`);
 
         clear_write(chalk`{cyanBright Copying Files...}`);
         const template = resolve(template_dir, "cli");
@@ -69,10 +69,10 @@ const actions: {
         console.log(chalk`{redBright Not Implemented, Fallback to lib template}`);
         return await actions.lib();
         clear_write(chalk`{cyanBright Initialing...}`);
-        execSync(`pnpm init -y`);
+        execSync(`pnpm init`);
         const temp = mkdtempSync(resolve(tmpdir(), "jacob-new-"));
         console.log("temp", temp);
-        execSync(`pnpx -y degit antfu/vitesse . -f`, { cwd: temp });
+        execSync(`pnpm dlx degit antfu/vitesse . -f`, { cwd: temp });
         copy_dir(temp, process.cwd());
 
         clear_write(chalk`{cyanBright Overwriting Settings...}`);
@@ -98,7 +98,7 @@ const actions: {
         console.log(chalk`{redBright Not Implemented, Fallback to lib template}`);
         return await actions.lib();
         clear_write(chalk`{cyanBright Initialing...}`);
-        execSync(`pnpm init -y`);
+        execSync(`pnpm init`);
         clear_write(chalk`{cyanBright Copying Files...}`);
         const template = resolve(template_dir, "react");
         copy_dir(template, process.cwd(), ["package.json"]);
