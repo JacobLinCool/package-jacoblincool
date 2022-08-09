@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { existsSync, readFileSync, lstatSync } from "fs";
+import { readFileSync } from "fs";
 import { resolve } from "path";
 import chalk from "chalk";
 import { program, Command } from "commander";

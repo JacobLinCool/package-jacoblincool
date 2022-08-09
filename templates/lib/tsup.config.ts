@@ -5,8 +5,9 @@ export default defineConfig((options) => ({
     outDir: "lib",
     target: "node16",
     format: ["cjs", "esm"],
+    shims: true,
     clean: true,
     splitting: false,
     minify: !options.watch,
-    dts: options.watch ? false : { resolve: true },
+    dts: !options.watch,
 }));
