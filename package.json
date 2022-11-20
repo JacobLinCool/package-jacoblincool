@@ -46,7 +46,7 @@
     },
     "dependencies": {
         "chalk": "4.1.2",
-        "commander": "8.3.0",
+        "commander": "9.4.1",
         "node-fetch": "2.6.6",
         "prompts": "2.4.2"
     }
