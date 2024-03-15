@@ -46,71 +46,14 @@ const actions: {
     cli: async () => {
         console.log(chalk`{redBright Not Implemented, Fallback to lib template}`);
         return await actions.lib();
-        clear_write(chalk`{cyanBright Initialing...}`);
-        execSync(`pnpm init`);
-
-        clear_write(chalk`{cyanBright Copying Files...}`);
-        const template = resolve(template_dir, "cli");
-        copy_dir(template, process.cwd(), ["package.json"]);
-
-        clear_write(chalk`{cyanBright Merging package.json...}`);
-        const merged = merge_object(
-            JSON.parse(readFileSync(resolve(process.cwd(), "package.json"), "utf8")),
-            JSON.parse(readFileSync(resolve(template, "package.json"), "utf8")),
-        );
-        writeFileSync(resolve(process.cwd(), "package.json"), JSON.stringify(merged, null, 4));
-
-        clear_write(chalk`{cyanBright Installing Dependencies...}`);
-        execSync(`pnpm i`);
-
-        clear_write(chalk`{cyanBright Done!}`);
     },
     vue: async () => {
         console.log(chalk`{redBright Not Implemented, Fallback to lib template}`);
         return await actions.lib();
-        clear_write(chalk`{cyanBright Initialing...}`);
-        execSync(`pnpm init`);
-        const temp = mkdtempSync(resolve(tmpdir(), "jacob-new-"));
-        console.log("temp", temp);
-        execSync(`pnpm dlx degit antfu/vitesse . -f`, { cwd: temp });
-        copy_dir(temp, process.cwd());
-
-        clear_write(chalk`{cyanBright Overwriting Settings...}`);
-        const pkg = JSON.parse(readFileSync(resolve(process.cwd(), "package.json"), "utf8"));
-        const vitesse = JSON.parse(readFileSync(resolve(temp, "package.json"), "utf8"));
-        delete pkg.scripts;
-        delete vitesse.private;
-        vitesse.scripts.format = `prettier --write '**/*.{js,ts,jsx,tsx,json,yml,yaml,md,html,vue}' '!dist'`;
-
-        // clear_write(chalk`{cyanBright Merging package.json...}`);
-        // const merged = merge_object(
-        //     JSON.parse(readFileSync(resolve(process.cwd(), "package.json"), "utf8")),
-        //     JSON.parse(readFileSync(resolve(template, "package.json"), "utf8")),
-        // );
-        // writeFileSync(resolve(process.cwd(), "package.json"), JSON.stringify(merged, null, 4));
-
-        clear_write(chalk`{cyanBright Installing Dependencies...}`);
-        execSync(`pnpm i`);
-
-        clear_write(chalk`{cyanBright Done!}`);
     },
     react: async () => {
         console.log(chalk`{redBright Not Implemented, Fallback to lib template}`);
         return await actions.lib();
-        clear_write(chalk`{cyanBright Initialing...}`);
-        execSync(`pnpm init`);
-        clear_write(chalk`{cyanBright Copying Files...}`);
-        const template = resolve(template_dir, "react");
-        copy_dir(template, process.cwd(), ["package.json"]);
-        clear_write(chalk`{cyanBright Merging package.json...}`);
-        const merged = merge_object(
-            JSON.parse(readFileSync(resolve(process.cwd(), "package.json"), "utf8")),
-            JSON.parse(readFileSync(resolve(template, "package.json"), "utf8")),
-        );
-        writeFileSync(resolve(process.cwd(), "package.json"), JSON.stringify(merged, null, 4));
-        clear_write(chalk`{cyanBright Installing Dependencies...}`);
-        execSync(`pnpm i`);
-        clear_write(chalk`{cyanBright Done!}`);
     },
 };
 
